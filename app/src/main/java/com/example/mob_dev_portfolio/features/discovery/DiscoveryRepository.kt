@@ -819,16 +819,6 @@ class DiscoveryRepository(
             val existingService = db.serviceDao().findByDeviceIdAndPort(existingDevice.id, portScan.portResult.port)
             val riskRule = settingsRepository.getRiskRule()
 
-            val (serviceRiskRating, serviceRiskFindings) = riskAssessor.serviceAssess(
-                ipAddress = portScan.ipAddress,
-                port = portScan.portResult.port,
-                resolveStatus = ResolveStatus.PARTIAL,
-                riskRule = riskRule
-            )
-
-            val isNew: Boolean
-            val firstSeen: LocalDateTime
-
             val type = when (portScan.portResult.port) {
                 23 -> ServiceType.TELNET
                 21 -> ServiceType.FTP
@@ -839,6 +829,17 @@ class DiscoveryRepository(
                 443 -> ServiceType.HTTPS
                 else -> null
             }
+
+            val (serviceRiskRating, serviceRiskFindings) = riskAssessor.serviceAssess(
+                ipAddress = portScan.ipAddress,
+                serviceType = type,
+                port = portScan.portResult.port,
+                resolveStatus = ResolveStatus.PARTIAL,
+                riskRule = riskRule
+            )
+
+            val isNew: Boolean
+            val firstSeen: LocalDateTime
 
             val isChanged: Boolean
 

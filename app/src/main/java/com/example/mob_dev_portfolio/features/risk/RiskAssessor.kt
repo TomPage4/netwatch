@@ -41,6 +41,9 @@ class RiskAssessor {
             ServiceType.HAP -> findings.add(RiskFindingDTO(points = 2, RiskRating.LOW, title = "Smart home device", detail = "A HomeKit device is present. Smart home devices on unknown networks should be noted"))
             ServiceType.HUE -> findings.add(RiskFindingDTO(points = 2, RiskRating.LOW, title = "Smart lighting present", detail = "A Philips Hue bridge is on the network. Smart home systems on public networks are unusual"))
             ServiceType.MATTER -> findings.add(RiskFindingDTO(points = 2, RiskRating.LOW, title = "Smart home device", detail = "A Matter-compatible device is present. These are uncommon on public networks"))
+            ServiceType.TELNET -> findings.add(RiskFindingDTO(points = 5, RiskRating.HIGH, title = "Insecure remote access", detail = "Telnet transmits all data including credentials in plaintext and should not be used on any network"))
+            ServiceType.FTP -> findings.add(RiskFindingDTO(points = 5, RiskRating.HIGH, title = "Unencrypted file transfer", detail = "FTP sends files and credentials in plaintext, making it easy to intercept on shared networks"))
+            ServiceType.RTSP -> findings.add(RiskFindingDTO(points = 2, RiskRating.LOW, title = "Media stream advertised", detail = "A device is broadcasting a live or on-demand media stream that nearby devices may be able to access"))
             else -> findings.add(RiskFindingDTO(points = 3, RiskRating.MED, title = "Unrecognised service type", detail = "This service type is unknown. It should be treated with caution"))
         }
 
