@@ -165,7 +165,7 @@ fun SettingsMenu(
                     onScannedServiceTypes()
                 }
             ) {
-                Text("Scanned Service Types", style = MaterialTheme.typography.bodyLarge)
+                Text("Discovery Methods", style = MaterialTheme.typography.bodyLarge)
             }
 
             SettingsMenuRow(

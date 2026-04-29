@@ -288,7 +288,7 @@ fun DeviceRow(
                 Row {
                     when (device.scanType) {
                         ScanType.SERVICE_DISCOVERY -> ServiceBadge(text = "SD", cardShape = cardShape, color = Pink)
-                        ScanType.HOST_SCAN -> ServiceBadge(text = "HS", cardShape = cardShape, color = Pink)
+                        ScanType.HOST_DISCOVERY -> ServiceBadge(text = "HD", cardShape = cardShape, color = Pink)
                     }
 
                     Spacer(modifier = Modifier.width(4.dp))

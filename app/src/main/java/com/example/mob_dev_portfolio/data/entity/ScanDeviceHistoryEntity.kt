@@ -4,7 +4,6 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
-import com.example.mob_dev_portfolio.data.constants.ScanType
 import com.example.mob_dev_portfolio.data.converter.DateTimeConverters
 import com.example.mob_dev_portfolio.data.converter.RiskFindingConverter
 import com.example.mob_dev_portfolio.data.dto.RiskFindingDTO

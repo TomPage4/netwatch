@@ -396,26 +396,8 @@ fun DeviceInfo(device: DeviceEntity) {
                     ) {
                         Text(
                             text = device.displayName,
-                            style = MaterialTheme.typography.labelLarge,
-                            modifier = Modifier.weight(1f)
+                            style = MaterialTheme.typography.labelLarge
                         )
-
-                        Spacer(modifier = Modifier.width(12.dp))
-
-                        when (device.scanType) {
-                            ScanType.SERVICE_DISCOVERY ->
-                                ServiceBadge(
-                                    text = "service disc",
-                                    cardShape = RoundedCornerShape(4.dp),
-                                    color = Pink
-                                )
-                            ScanType.HOST_SCAN ->
-                                ServiceBadge(
-                                    text = "host scan",
-                                    cardShape = RoundedCornerShape(4.dp),
-                                    color = Blue
-                                )
-                        }
                     }
                 }
             }
@@ -502,7 +484,7 @@ fun DeviceInfo(device: DeviceEntity) {
                 title = "Observed via",
                 data = when (device.scanType) {
                     ScanType.SERVICE_DISCOVERY -> "Service Discovery"
-                    ScanType.HOST_SCAN -> "Host Scan"
+                    ScanType.HOST_DISCOVERY -> "Host Discovery"
                     else -> "Unknown"
                 }
             )

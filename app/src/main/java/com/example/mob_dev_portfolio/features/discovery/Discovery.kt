@@ -3,7 +3,6 @@ package com.example.mob_dev_portfolio.features.discovery
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.wifi.WifiManager
-import android.util.Log
 import com.example.mob_dev_portfolio.data.constants.ScanType
 import com.example.mob_dev_portfolio.data.dto.InetAddressSubnetMaskDTO
 import com.example.mob_dev_portfolio.data.dto.PortResultDTO
@@ -121,7 +120,7 @@ class Discovery(
                 }
             }
         }
-        if (isScanTypeEnabled(ScanType.HOST_SCAN)) {
+        if (isScanTypeEnabled(ScanType.HOST_DISCOVERY)) {
             subnetScan()
         }
     }

@@ -65,7 +65,7 @@ fun ServiceTypesScreen(
                 .fillMaxSize()
         ) {
             PageHeader(
-                heading = "Service Types"
+                heading = "Discovery Methods"
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -141,7 +141,7 @@ fun ParentRow(
 ) {
 
     val title = when (scanType.scanType) {
-        ScanType.HOST_SCAN -> "Host Scan"
+        ScanType.HOST_DISCOVERY -> "Host Discovery"
         ScanType.SERVICE_DISCOVERY -> "Service Discovery"
         else -> "Unknown"
     }

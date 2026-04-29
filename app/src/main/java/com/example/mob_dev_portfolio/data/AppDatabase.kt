@@ -48,7 +48,7 @@ import java.time.ZoneId
         ScanDeviceHistoryEntity::class,
         ScanTypeEntity::class
     ],
-    version = 2,
+    version = 1,
     exportSchema = false
 )
 @TypeConverters(DateTimeConverters::class)
