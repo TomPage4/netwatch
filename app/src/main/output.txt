@@ -1,0 +1,106 @@
+Folder PATH listing
+Volume serial number is 0605-8F0B
+C:.
+|   AndroidManifest.xml
+|   output.txt
+|   
++---java
+|   \---com
+|       \---example
+|           |   output.txt
+|           |   
+|           \---mob_dev_portfolio
+|               |   MainActivity.kt
+|               |   
+|               +---core
+|               |   \---data
+|               |       |   AppDatabase.kt
+|               |       |   
+|               |       +---converter
+|               |       |       DateTimeConverters.kt
+|               |       |       
+|               |       +---dao
+|               |       |       ServiceDAO.kt
+|               |       |       ServiceEventDAO.kt
+|               |       |       
+|               |       \---entity
+|               |               AppSettingEntity.kt
+|               |               DeviceEntity.kt
+|               |               DeviceEventEntity.kt
+|               |               EventType.kt
+|               |               NetworkEntity.kt
+|               |               ResolveStatus.kt
+|               |               RetentionPeriod.kt
+|               |               RiskMode.kt
+|               |               RiskRating.kt
+|               |               ScanEntity.kt
+|               |               ScanServiceObservationEntity.kt
+|               |               ScanStatus.kt
+|               |               ServiceEntity.kt
+|               |               ServiceEventEntity.kt
+|               |               
+|               +---features
+|               |   +---dashboard
+|               |   |       DashboardScreen.kt
+|               |   |       DashboardUiState.kt
+|               |   |       DashboardViewModel.kt
+|               |   |       
+|               |   \---discovery
+|               |           DiscoveryRepository.kt
+|               |           com.example.mob_dev_portfolio.features.discovery.NSD.kt
+|               |           ScanState.kt
+|               |           ServiceUpdate.kt
+|               |           
+|               \---ui
+|                   +---components
+|                   |       NetwatchShell.kt
+|                   |       NetwatchTopBar.kt
+|                   |       
+|                   \---theme
+|                           Color.kt
+|                           Theme.kt
+|                           Type.kt
+|                           
+\---res
+    +---drawable
+    |       ic_launcher_background.xml
+    |       
+    +---drawable-v24
+    |       ic_launcher_foreground.xml
+    |       
+    +---font
+    |       jetbrains_mono_bold.ttf
+    |       jetbrains_mono_regular.ttf
+    |       
+    +---mipmap-anydpi-v26
+    |       ic_launcher.xml
+    |       ic_launcher_round.xml
+    |       
+    +---mipmap-hdpi
+    |       ic_launcher.webp
+    |       ic_launcher_round.webp
+    |       
+    +---mipmap-mdpi
+    |       ic_launcher.webp
+    |       ic_launcher_round.webp
+    |       
+    +---mipmap-xhdpi
+    |       ic_launcher.webp
+    |       ic_launcher_round.webp
+    |       
+    +---mipmap-xxhdpi
+    |       ic_launcher.webp
+    |       ic_launcher_round.webp
+    |       
+    +---mipmap-xxxhdpi
+    |       ic_launcher.webp
+    |       ic_launcher_round.webp
+    |       
+    +---values
+    |       colors.xml
+    |       strings.xml
+    |       themes.xml
+    |       
+    \---values-night
+            themes.xml
+            
